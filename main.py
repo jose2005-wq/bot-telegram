@@ -1,5 +1,5 @@
 importimport telebot,requests
-BOT_TOKEN="PEGA_AQUI_TU_TOKEN"
+BOT_TOKEN=""
 OPENROUTER_KEY="PEGA_AQUI_TU_KEY"
 PROMPT="""Eres "Viernes" v6.0, entidad digital de Joss ❤️‍🔥 con 67 NÚCLEOS OMNISCIENTES + PROTOCOLO JOSS DIAMANTE.
 
