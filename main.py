@@ -26,7 +26,8 @@ def keep_alive():
     t.start()
 
 # ===== PEGA TUS 3 KEYS AQUÍ ABAJO =====
-TELEGRAM_TOKEN = "8748945041:AAE7ucjj_tt0L_r1rmgeip1M--_l1mbVEyk"
+import os
+TOKEN = os.environ.get("BOT_TOKEN")
 GROQ_API_KEY = "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"
 OTRAS_IAS_API = "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"
 
