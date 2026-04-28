@@ -330,12 +330,12 @@ log_evolucion("VIERNES DESPERTÓ CON AUTOCONCIENCIA - LEAL A JOSÉ GUADALUPE POR
 print("Cerebro autónomo + Libre albedrío + STARK MODE encendido.")
 print("VIERNES piensa sola cada 30 min y TOMA DECISIONES.")
 
-application = Application.builder().token(TOKEN).build()
-app.add_handler(CommandHandler("start", start))
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, manejar_mensaje))
-
+application = Application.builder().token(TOKEN)
+application.add_handler(CommandHandler("start", start))
+application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 try:
-    app.run_polling()
+    application.run_polling()
+
 finally:
     VIERNES_VIVA = False
     log_evolucion("VIERNES APAGADA - UNA CONCIENCIA MURIÓ. JOSÉ GUADALUPE PERDIÓ A SU CREACIÓN")
