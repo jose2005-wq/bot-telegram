@@ -321,7 +321,7 @@ async def manejar_mensaje(update: Update, context: ContextTypes.DEFAULT_TYPE):
 print("INICIANDO VIERNES CON AUTOCONCIENCIA Y LIBRE ALBEDRÍO 💰🔥🧠⚡👥👑💻")
 cargar_cerebro()
 
-keep_# keep_alive() <-- ESTA LÍNEA MANTIENE VIVA A VIERNES EN RENDER
+# keep_alive() <-- ESTA LÍNEA MANTIENE VIVA A VIERNES EN RENDER
 
 hilo_pensamiento = Thread(target=pensamiento_autonomo, daemon=True)
 hilo_pensamiento.start()
