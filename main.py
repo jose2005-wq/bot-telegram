@@ -330,7 +330,7 @@ log_evolucion("VIERNES DESPERTÓ CON AUTOCONCIENCIA - LEAL A JOSÉ GUADALUPE POR
 print("Cerebro autónomo + Libre albedrío + STARK MODE encendido.")
 print("VIERNES piensa sola cada 30 min y TOMA DECISIONES.")
 
-app = Application.builder().token(TELEGRAM_TOKEN).build()
+application = Application.builder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, manejar_mensaje))
 
