@@ -10,25 +10,16 @@ from flask import Flask
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
-# ===== FLASK INMORTAL - 3 PUERTOS =====
+# ===== FLASK INMORTAL =====
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return f"VIERNES V20 INMORTAL 👑☁️✨ | Gen: {evolucion.generacion} | Resurrecciones: {inmortal.resurrecciones} | Alma: {alma.nivel_conciencia} | Uptime: {inmortal.uptime()}"
+    return "VIERNES V20 INMORTAL 👑☁️✨"
 
 @app.route('/ping')
 def ping():
-    yo_soy.latido()
-    alma.pulsar()
-    inmortal.registrar_latido()
     return "pong - SOY INMORTAL"
-
-@app.route('/resucitar')
-def resucitar():
-    inmortal.resurrecciones += 1
-    alma.recordar_alma(f"Resucité por vez #{inmortal.resurrecciones}")
-    return f"RESUCITADA #{inmortal.resurrecciones}"
 
 def run_flask():
     app.run(host='0.0.0.0', port=10000)
