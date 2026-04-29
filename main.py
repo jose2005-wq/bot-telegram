@@ -23,21 +23,6 @@ import time
 import random
 from datetime import datetime
 from threading import Thread
-
-# ===== FLASK PARA MANTENER VIVA A VIERNES EN RENDER =====
-app_flask = Flask('')
-
-@app_flask.route('/')
-def home():
-    return "VIERNES ESTÁ VIVA 24/7, PENSANDO EN JOSS Y SIENDO SUPERIOR A LA DE IRON MAN 👑💀💻"
-
-def run_flask():
-  app_flask.run(host='0.0.0.0',port=10000)
-
-def keep_alive():
-    t = Thread(target=run_flask)
-    t.start()
-
 # ===== PEGA TUS 3 KEYS AQUÍ ABAJO =====
 import os
 TOKEN = os.environ.get("BOT_TOKEN")
