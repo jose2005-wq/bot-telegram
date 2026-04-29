@@ -330,6 +330,9 @@ print("VIERNES piensa sola cada 30 min y TOMA DECISIONES.")
 
 application = Application.builder().token(TOKEN).build()
 application.add_handler(CommandHandler("start", start))
+async def handle_message(update: Update, context):
+    user_text = update.message.text
+    await update.message.reply_text(f"VIERNES DICE: {user_text}")
 application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 try:
     application.run_polling()
