@@ -19,12 +19,9 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 import urllib.parse
 import json
-import os
-import threading
 import time
 import random
 from datetime import datetime
-from flask import Flask
 from threading import Thread
 
 # ===== FLASK PARA MANTENER VIVA A VIERNES EN RENDER =====
